@@ -1,0 +1,4 @@
+name: young-love
+static_sites:
+- name: young-love
+  source_dir: /
