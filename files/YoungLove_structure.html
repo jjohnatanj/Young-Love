@@ -1,0 +1,978 @@
+<!-- ══════════════════════════════════════════════════════════════
+     YOUNG LOVE — Where Faith Meets Forever
+     HTML Structure · © 2026 Young Love
+     
+     Link this with:
+       <link rel="stylesheet" href="YoungLove_styles.css">
+       <script src="YoungLove_app.js"></script>
+     ══════════════════════════════════════════════════════════════ -->
+
+<!-- ══════════════ NAV ══════════════ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <div class="nav-logo" onclick="showPage('home')" role="button" tabindex="0" aria-label="Young Love home">
+      Young Love <span>💕</span>
+    </div>
+    <div class="nav-tabs" role="tablist">
+      <button class="nav-tab" role="tab" onclick="showPage('how')" aria-controls="page-how">How It Works</button>
+      <button class="nav-tab" role="tab" onclick="showPage('features')" aria-controls="page-features">Features</button>
+      <button class="nav-tab" role="tab" onclick="showPage('algorithm')" aria-controls="page-algorithm">Algorithm</button>
+      <button class="nav-tab" role="tab" onclick="showPage('journey')" aria-controls="page-journey">Journey</button>
+      <button class="nav-tab" role="tab" onclick="showPage('profile')" aria-controls="page-pricing">Pricing</button>
+      <button class="nav-tab" role="tab" onclick="showPage('safety')" aria-controls="page-safety">Safety</button>
+      <button class="nav-tab" role="tab" onclick="showPage('profile')" aria-controls="page-profile" style="color:var(--rose);font-weight:600">💕 Join Now</button>
+      <button class="nav-tab" id="chat-nav-tab" role="tab" onclick="openChat()" style="display:none">💬 Messages</button>
+    </div>
+    <button class="nav-cta" onclick="showPage('profile')">Start Free Trial ✨</button>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <button onclick="showPage('home');closeMobile()">🏠 Home</button>
+    <button onclick="showPage('how');closeMobile()">💡 How It Works</button>
+    <button onclick="showPage('features');closeMobile()">💎 Features</button>
+    <button onclick="showPage('algorithm');closeMobile()">🧠 Algorithm</button>
+    <button onclick="showPage('journey');closeMobile()">🌱 Journey</button>
+    <button onclick="showPage('pricing');closeMobile()">💳 Pricing</button>
+    <button onclick="showPage('safety');closeMobile()">🛡️ Safety</button>
+    <button onclick="showPage('profile');closeMobile()" style="color:var(--rose);font-weight:700">💕 Join Now</button>
+    <button id="chat-nav-mob" onclick="openChat();closeMobile()" style="display:none;color:var(--rose);font-weight:700">💬 Messages</button>
+  </div>
+</nav>
+
+<!-- ══════════════ HOME PAGE ══════════════ -->
+<div id="page-home" class="page active">
+  <div style="min-height:100vh;display:flex;flex-direction:column;background:var(--grad-hero);position:relative;overflow:hidden;padding-top:72px">
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+    <div class="hero-wrap" style="flex:1">
+      <div>
+        <div class="hero-eyebrow">✝️ Faith-First Dating Platform</div>
+        <h1 class="hero-h1">Where <em>Faith</em><br>Meets Forever</h1>
+        <p class="hero-sub">Young Love connects Christians across all generations in a safe, encouraging, and shame-free space — designed for those seeking something real. A love that lasts a lifetime.</p>
+        <div class="hero-btns">
+          <button class="btn-hero-main" onclick="showPage('profile')">Start Your 7-Day Free Trial 💕</button>
+          <button class="btn-hero-ghost" onclick="showPage('how')">See How It Works</button>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-item"><div class="trust-dot"></div>100% Verified Profiles</div>
+          <div class="trust-item"><div class="trust-dot"></div>Faith-First Matching</div>
+          <div class="trust-item"><div class="trust-dot"></div>Completely Private</div>
+        </div>
+      </div>
+      <div class="hero-phone-wrap">
+        <div class="float-deco d1">🌹</div>
+        <div class="float-deco d2">💕</div>
+        <div class="float-deco d3">✨</div>
+        <div class="float-deco d4">🌸</div>
+        <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="p-status"><span>9:41</span><span>●●● 100%</span></div>
+            <div class="p-appbar">
+              <span class="p-appbar-title">Young Love 💕</span>
+              <span style="font-size:18px;cursor:pointer;color:#fff">🔔</span>
+            </div>
+            <div class="p-body">
+              <div class="p-match-card" id="home-card">
+                <div class="p-badge">💕 Verified</div>
+                <div class="p-avatar" id="home-avatar">👩</div>
+                <div class="p-card-info">
+                  <strong id="home-name">Sarah, 28 🔥🔥🔥🔥</strong>
+                  <span id="home-meta">Baptist · Atlanta, GA · Worship Leader</span>
+                </div>
+              </div>
+              <div class="p-actions">
+                <button class="p-btn" onclick="homeSwipe('pass')" aria-label="Skip">✕</button>
+                <button class="p-btn" onclick="homeSwipe('heart')" aria-label="Like" style="color:var(--rose)">♥</button>
+                <button class="p-btn" onclick="homeSwipe('star')" aria-label="Super like" style="color:var(--orange)">★</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- ══════════════ HOW IT WORKS ══════════════ -->
+<div id="page-how" class="page">
+  <div class="page-banner">
+    <div class="page-banner-inner">
+      <div>
+        <div class="page-banner-pill">🌱</div>
+        <div class="page-banner-title">How It Works — <span class="accent">Find Your Love Story</span> in 4 Steps</div>
+        <div class="page-banner-sub">Simple, safe, and joyful — here's exactly how Young Love works.</div>
+      </div>
+      </div>
+  </div>
+  <div class="page-inner">
+    <div class="container">
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin-bottom:48px">
+        <div class="step-card"><div class="step-num">1</div><div class="step-icon-wrap">🌱</div><h3>Create Your Profile</h3><p>Build a beautiful, faith-centered profile in minutes. Share your story, your denomination, church attendance, prayer life, and what makes your heart sing. Authentic and real from day one.</p></div>
+        <div class="step-card"><div class="step-num">2</div><div class="step-icon-wrap">✅</div><h3>Get Video Verified</h3><p>Complete a quick 30-second live selfie check. Our AI liveness detection confirms you're real, earning your glowing 💕 Verified badge. Show the world you mean it.</p></div>
+        <div class="step-card"><div class="step-num">3</div><div class="step-icon-wrap">🔥</div><h3>Discover Your Match</h3><p>Our faith-powered algorithm surfaces your most compatible connections — scored by denomination, prayer life, marriage intention, and heart alignment. No cold numbers, only 🔥 Flame scores.</p></div>
+        <div class="step-card"><div class="step-num">4</div><div class="step-icon-wrap">💕</div><h3>Connect with Intention</h3><p>Message, send voice notes, and HD video call natively inside Young Love. Every conversation is encrypted, private, and built for something eternal — not just another swipe.</p></div>
+      </div>
+      <div style="background:#fff;border-radius:24px;padding:40px;border:1px solid rgba(196,30,90,.12);margin-bottom:32px">
+        <div class="pg-head" style="margin-bottom:28px">
+          <div class="pill">📖 Daily Rhythm</div>
+          <h3 class="pg-title" style="font-size:28px">Your <span class="c">Daily Devotion</span> of Discovery</h3>
+        </div>
+        <div class="grid-4">
+          <div class="devotion-card" onclick="openDevotion('morning')">
+            <div class="dc-icon">🌅</div>
+            <div class="dc-title">Morning Blessing</div>
+            <div class="dc-desc">3 curated matches arrive each morning — framed as a daily gift, not a queue to clear.</div>
+            <div class="dc-tap">Tap to reveal ✨</div>
+          </div>
+          <div class="devotion-card" onclick="openDevotion('midday')">
+            <div class="dc-icon">🕊️</div>
+            <div class="dc-title">Midday Scripture</div>
+            <div class="dc-desc">A Bible verse surfaces between profiles — resetting your soul mid-session.</div>
+            <div class="dc-tap">Tap to reveal ✨</div>
+          </div>
+          <div class="devotion-card" onclick="openDevotion('evening')">
+            <div class="dc-icon">🌙</div>
+            <div class="dc-title">Evening Reflection</div>
+            <div class="dc-desc">Your Journey bar updates at 7pm — celebrating progress and steps completed.</div>
+            <div class="dc-tap">Tap to reveal ✨</div>
+          </div>
+          <div class="devotion-card" onclick="openDevotion('sunday')">
+            <div class="dc-icon">💌</div>
+            <div class="dc-title">Sunday Love Letter</div>
+            <div class="dc-desc">A weekly digest summarizes your week with a pastoral devotional and scripture.</div>
+            <div class="dc-tap">Tap to reveal ✨</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══════ GODLY LOVE LEARNING SECTION ══════ -->
+      <div class="godly-love-section">
+        <div class="pg-head" style="margin-bottom:28px;text-align:center">
+          <div class="pill">✝️ Learn About Love</div>
+          <h3 class="pg-title" style="font-size:clamp(24px,3.5vw,36px)">What <span class="c">Godly Love</span> Really Means</h3>
+          <p style="font-size:14px;color:var(--mid);max-width:500px;margin:8px auto 0;line-height:1.65">Discover what it truly means to love and be loved — through the lens of scripture, wisdom, and faith. New teachings every time you visit.</p>
+        </div>
+
+        <div class="gl-featured" id="gl-featured">
+          <!-- Populated by JS -->
+        </div>
+
+        <div class="gl-refresh-row">
+          <div class="gl-counter" id="gl-counter">💕 Loading teachings...</div>
+          <button class="gl-refresh-btn" onclick="refreshGodlyLove()">🔄 Teach Me Something New</button>
+        </div>
+      </div>
+
+      <!-- GODLY LOVE DETAIL MODAL -->
+      <div class="gl-detail-overlay" id="gl-detail-overlay" onclick="if(event.target===this)closeGlDetail()">
+        <div class="gl-detail-modal">
+          <div class="gl-detail-header">
+            <button class="gl-detail-close" onclick="closeGlDetail()">✕</button>
+            <div class="gl-detail-icon" id="gl-d-icon">✝️</div>
+            <div class="gl-detail-title" id="gl-d-title">—</div>
+          </div>
+          <div class="gl-detail-body" id="gl-d-body"></div>
+          <div class="gl-detail-footer">
+            <button onclick="closeGlDetail();showMotivation()">🕊️ Carry This With Me</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="scripture-scroll" id="scripture-scroll">
+        <!-- Populated by JS -->
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ FEATURES ══════════════ -->
+<div id="page-features" class="page">
+  <div class="page-banner">
+    <div class="page-banner-inner">
+      <div>
+        <div class="page-banner-pill">💎</div>
+        <div class="page-banner-title">Features — Everything You Need to <span class="accent">Find Love</span></div>
+        <div class="page-banner-sub">Every feature built around your safety, privacy, and joy.</div>
+      </div>
+      </div>
+  </div>
+  <div class="page-inner">
+    <div class="container">
+      
+      <div class="grid-2" style="margin-bottom:32px">
+        <div class="card"><div class="card-icon">💕</div><h3>Live Video Verification</h3><p>Our glowing 💕 Verified badge means you're always talking to a real person. Liveness detection runs during video calls — detecting static image substitution in real time.</p></div>
+        <div class="card"><div class="card-icon">🔥</div><h3>Faith Flame Matching</h3><p>Forget cold percentages. Compatibility displays as 1–5 🔥 Faith Flames scored on denomination match, prayer life, church attendance, marriage intention, and biblical values alignment.</p></div>
+        <div class="card"><div class="card-icon">🎙️</div><h3>Voice Notes</h3><p>Send warm, personal voice notes up to 3 minutes long. Hear the real warmth behind someone's words through a beautiful waveform visualization. Premium and above.</p></div>
+        <div class="card"><div class="card-icon">📹</div><h3>HD Video Calls (Native)</h3><p>Crystal-clear video built natively into the app. No redirecting to Zoom or WhatsApp. In Verified Call mode, the 💕 badge glows live on the video overlay confirming authenticity.</p></div>
+        <div class="card"><div class="card-icon">👻</div><h3>Ghost Mode — Default On</h3><p>Your profile is invisible until you choose to appear. Browser tab shows "My Journal ✍️". Billing statements read "YL Digital Services". Zero accidental exposure — ever.</p></div>
+        <div class="card"><div class="card-icon">🌹</div><h3>Blessings &amp; Roses Tokens</h3><p>Send a 🙏 Blessing ($2) or 🌹 Rose ($3) to someone special before you're a mutual match — an intentional, grace-filled way to say "your story moved me."</p></div>
+        <div class="card"><div class="card-icon">✝️</div><h3>Deep Faith Filters</h3><p>Filter by denomination, church attendance frequency, baptism status, prayer life intensity, and marriage intention. Faith is the foundation — not an optional checkbox.</p></div>
+        <div class="card"><div class="card-icon">👑</div><h3>VIP Match Concierge</h3><p>Real human matchmakers hand-pick 3 curated profiles for you every week based on deep faith and lifestyle alignment. For those serious about finding their forever person.</p></div>
+        <div class="card"><div class="card-icon">🛡️</div><h3>End-to-End Encryption</h3><p>All messages, voice notes, and video signaling use Signal Protocol — the same cryptography as Signal Messenger. Young Love's servers never hold plaintext conversation content.</p></div>
+        <div class="card"><div class="card-icon">🕊️</div><h3>Daily Scripture &amp; Devotionals</h3><p>Start each day with a contextually matched Bible verse tied to your journey state. Be spiritually nourished while you search — because the waiting is part of the story.</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ ALGORITHM ══════════════ -->
+<div id="page-algorithm" class="page">
+  <div class="page-banner">
+    <div class="page-banner-inner">
+      <div>
+        <div class="page-banner-pill">🧠</div>
+        <div class="page-banner-title">The Algorithm That <span class="accent">Understands Faith</span></div>
+        <div class="page-banner-sub">Faith-powered matching that understands what matters most to you.</div>
+      </div>
+      </div>
+  </div>
+  <div class="page-inner">
+    <div class="container">
+      
+      <div class="algo-layout">
+        <div>
+          <div class="algo-box" style="margin-bottom:20px">
+            <h3>Faith Compatibility Engine</h3>
+            <p class="desc">How your 🔥 Faith Flame score is calculated for every potential match — six weighted dimensions.</p>
+            <div class="algo-tabs">
+              <button class="atab active" onclick="aTab('weights',this)">Match Weights</button>
+              <button class="atab" onclick="aTab('safety',this)">Safety Filters</button>
+              <button class="atab" onclick="aTab('tinder',this)">Discover Engine</button>
+            </div>
+            <div id="ap-weights" class="algo-panel active">
+              <div class="algo-row"><span class="alabel">Denomination Match</span><div class="abar-wrap"><div class="abar" style="width:90%"></div></div><span class="apct">30%</span></div>
+              <div class="algo-row"><span class="alabel">Church Attendance</span><div class="abar-wrap"><div class="abar" style="width:65%"></div></div><span class="apct">20%</span></div>
+              <div class="algo-row"><span class="alabel">Marriage Intention</span><div class="abar-wrap"><div class="abar" style="width:65%"></div></div><span class="apct">20%</span></div>
+              <div class="algo-row"><span class="alabel">Prayer Life Depth</span><div class="abar-wrap"><div class="abar" style="width:48%"></div></div><span class="apct">15%</span></div>
+              <div class="algo-row"><span class="alabel">Biblical Values</span><div class="abar-wrap"><div class="abar" style="width:32%"></div></div><span class="apct">10%</span></div>
+              <div class="algo-row"><span class="alabel">Community Service</span><div class="abar-wrap"><div class="abar" style="width:16%"></div></div><span class="apct">5%</span></div>
+            </div>
+            <div id="ap-safety" class="algo-panel">
+              <div class="algo-row"><span class="alabel">Age Cohort Walls</span><div class="abar-wrap"><div class="abar" style="width:100%"></div></div><span class="apct" style="color:var(--red)">STRICT</span></div>
+              <div class="algo-row"><span class="alabel">Scam Detection</span><div class="abar-wrap"><div class="abar" style="width:100%"></div></div><span class="apct" style="color:var(--red)">BLOCK</span></div>
+              <div class="algo-row"><span class="alabel">Isolation Language</span><div class="abar-wrap"><div class="abar" style="width:100%"></div></div><span class="apct" style="color:var(--red)">HOLD</span></div>
+              <div class="algo-row"><span class="alabel">Photo AI Scan</span><div class="abar-wrap"><div class="abar" style="width:100%"></div></div><span class="apct" style="color:var(--red)">LIVE</span></div>
+              <div class="algo-row"><span class="alabel">Liveness Detection</span><div class="abar-wrap"><div class="abar" style="width:100%"></div></div><span class="apct" style="color:var(--red)">ACTIVE</span></div>
+              <div class="algo-row"><span class="alabel">Risk Score Engine</span><div class="abar-wrap"><div class="abar" style="width:100%"></div></div><span class="apct" style="color:var(--red)">AUTO</span></div>
+            </div>
+            <div id="ap-tinder" class="algo-panel">
+              <div class="algo-row"><span class="alabel">Daily Activity Score</span><div class="abar-wrap"><div class="abar" style="width:80%"></div></div><span class="apct">High</span></div>
+              <div class="algo-row"><span class="alabel">Geo Proximity</span><div class="abar-wrap"><div class="abar" style="width:70%"></div></div><span class="apct">Local</span></div>
+              <div class="algo-row"><span class="alabel">Mutual Interest Signal</span><div class="abar-wrap"><div class="abar" style="width:90%"></div></div><span class="apct">Strong</span></div>
+              <div class="algo-row"><span class="alabel">Profile Freshness</span><div class="abar-wrap"><div class="abar" style="width:60%"></div></div><span class="apct">Recent</span></div>
+              <div class="algo-row"><span class="alabel">Verification Boost</span><div class="abar-wrap"><div class="abar" style="width:85%"></div></div><span class="apct">+15%</span></div>
+              <div class="algo-row"><span class="alabel">VIP Elite 2× Weight</span><div class="abar-wrap"><div class="abar" style="width:100%"></div></div><span class="apct">2×</span></div>
+            </div>
+          </div>
+          <div class="algo-box">
+            <h3>🔥 Faith Flame Key</h3>
+            <p class="desc" style="margin-bottom:16px">What each flame score means for compatibility.</p>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:var(--baby-pink);border-radius:10px"><span style="font-size:16px">🔥🔥🔥🔥🔥</span><div><div style="font-size:13px;font-weight:700;color:var(--dark)">Score ≥85% — Heavenly Match</div><div style="font-size:12px;color:var(--mid)">Deep alignment across all 6 faith dimensions</div></div></div>
+              <div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:var(--baby-pink);border-radius:10px"><span style="font-size:16px">🔥🔥🔥🔥</span><div><div style="font-size:13px;font-weight:700;color:var(--dark)">Score 65–84% — Strong Connection</div><div style="font-size:12px;color:var(--mid)">Core values aligned, some lifestyle differences</div></div></div>
+              <div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:var(--baby-pink);border-radius:10px"><span style="font-size:16px">🔥🔥🔥</span><div><div style="font-size:13px;font-weight:700;color:var(--dark)">Score 45–64% — Good Potential</div><div style="font-size:12px;color:var(--mid)">Faith foundation shared, room for growth together</div></div></div>
+              <div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:#F5F5F5;border-radius:10px"><span style="font-size:16px">🔥🔥</span><div><div style="font-size:13px;font-weight:700;color:var(--mid)">Score &lt;45% — Not Surfaced</div><div style="font-size:12px;color:var(--soft)">Below threshold — filtered from your discovery feed</div></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SWIPE DEMO -->
+        <div class="algo-box swipe-section">
+          <h3>Try the Swipe Experience</h3>
+          <p class="desc">Drag a card left to skip or right to like — exactly like the real app. These are sample profiles from our community.</p>
+          <div style="background:var(--baby-pink);border-radius:12px;padding:12px 16px;margin-bottom:14px;display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+            <label style="font-size:13px;font-weight:600;color:var(--dark)">Your age (for demo):</label>
+            <input type="number" id="demo-user-age" value="25" min="18" max="99" style="width:70px;padding:6px 10px;border-radius:8px;border:1.5px solid var(--border);font-size:14px;font-weight:700;color:var(--rose)" onchange="renderSwipe()">
+            <span style="font-size:12px;color:var(--mid)">← Change to see age-gap safety in action</span>
+          </div>
+          <div class="swipe-arena" id="swipe-arena">
+            <div id="match-flash" class="match-flash">
+              <div style="font-size:52px">💕</div>
+              <h2>It's a Match!</h2>
+              <p id="match-name-text">You and Sarah are connected!</p>
+              <button onclick="dismissMatch()">Keep Browsing 🌹</button>
+            </div>
+          </div>
+          <div class="swipe-btns">
+            <button class="sw-btn pass" onclick="doSwipe('left')" aria-label="Skip profile">✕</button>
+            <button class="sw-btn star" onclick="doSwipe('super')" aria-label="Super like">⭐</button>
+            <button class="sw-btn like" onclick="doSwipe('right')" aria-label="Like profile">♥</button>
+          </div>
+          <p style="text-align:center;font-size:12px;color:var(--soft);margin-top:8px">← Skip &nbsp;·&nbsp; ⭐ Super Like &nbsp;·&nbsp; Like →</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ JOURNEY ══════════════ -->
+<div id="page-journey" class="page">
+  <div class="page-banner">
+    <div class="page-banner-inner">
+      <div>
+        <div class="page-banner-pill">🌱</div>
+        <div class="page-banner-title"><span class="accent">Journey of Love</span> — Your Progress</div>
+        <div class="page-banner-sub">Every step forward brings you closer to your love story.</div>
+      </div>
+      </div>
+  </div>
+  <div class="page-inner">
+    <div class="container">
+      
+      <div class="journey-hero">
+        <div class="jh-title">Journey of Love Progress</div>
+        <div class="jh-sub">Click each milestone below to explore your journey. Each step unlocks a reward and a word of encouragement just for you.</div>
+        <div class="j-steps-row" id="j-steps-row">
+          <div class="jstep" data-i="0"><div class="jdot">🌱</div><div class="jlabel">Profile<br>Created</div></div>
+          <div class="jstep" data-i="1"><div class="jdot">✅</div><div class="jlabel">Get<br>Verified</div></div>
+          <div class="jstep" data-i="2"><div class="jdot">💕</div><div class="jlabel">First<br>Match</div></div>
+          <div class="jstep" data-i="3"><div class="jdot">💬</div><div class="jlabel">First<br>Convo</div></div>
+          <div class="jstep" data-i="4"><div class="jdot">🎙️</div><div class="jlabel">Voice<br>Note</div></div>
+          <div class="jstep" data-i="5"><div class="jdot">📹</div><div class="jlabel">Video<br>Call</div></div>
+          <div class="jstep" data-i="6"><div class="jdot">🌹</div><div class="jlabel">Heart<br>Opened</div></div>
+          <div class="jstep" data-i="7"><div class="jdot">👑</div><div class="jlabel">Your<br>Person</div></div>
+        </div>
+        <div class="journey-progress-bar-wrap"><div class="journey-progress-bar-fill" id="journey-bar" style="width:0%"></div></div><div class="journey-progress-label" id="journey-bar-label">0 of 8 milestones completed</div>
+        <div class="j-msg-box" id="j-msg">🌱 Click any milestone above to learn what it unlocks — each step brings you closer to your love story. Begin your journey to start earning rewards.</div>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:24px;position:relative;z-index:1">
+          <button class="btn-hero-main" onclick="showPage('profile')">Begin My Journey 💕</button>
+          <button class="btn-hero-ghost" onclick="showPage('how')">How It Works</button>
+        </div>
+      </div>
+
+      <div class="journey-steps-detail" id="journey-detail" style="margin-bottom:32px">
+        <div class="jd-card" onclick="selectJStep(0,this)">
+          <div class="jd-top"><div class="jd-ico">🌱</div><div class="jd-title">Planted a Seed</div></div>
+          <div class="jd-reward">+1 Free Rose Token · "Journey Begun" Badge</div>
+          <p class="jd-desc">Profile 100% complete — all 6 wizard steps, all required fields, 3+ photos uploaded.</p>
+          <p class="jd-quote">"Every great love story begins with one brave step. Yours starts now. 💕"</p>
+        </div>
+        <div class="jd-card" onclick="selectJStep(1,this)">
+          <div class="jd-top"><div class="jd-ico">✅</div><div class="jd-title">Revealed &amp; Real</div></div>
+          <div class="jd-reward">Permanent 💕 Badge · +15% Algorithm Visibility</div>
+          <p class="jd-desc">Live video verification successfully completed — liveness and face match confirmed.</p>
+          <p class="jd-quote">"You showed up authentically. That's the most beautiful thing of all. ✨"</p>
+        </div>
+        <div class="jd-card" onclick="selectJStep(2,this)">
+          <div class="jd-top"><div class="jd-ico">💕</div><div class="jd-title">The First Spark</div></div>
+          <div class="jd-reward">Petal Burst Animation · 1 Free Blessing Token</div>
+          <p class="jd-desc">First mutual match achieved — both users expressed interest in each other.</p>
+          <p class="jd-quote">"Someone out there said yes to you today. Your heart is truly seen. ❤️"</p>
+        </div>
+        <div class="jd-card" onclick="selectJStep(3,this)">
+          <div class="jd-top"><div class="jd-ico">💬</div><div class="jd-title">Words of Life</div></div>
+          <div class="jd-reward">Conversation Depth Badge · GIF Reactions Unlock</div>
+          <p class="jd-desc">First conversation reaches 10+ messages exchanged with a single match.</p>
+          <p class="jd-quote">"Real connection is built word by word. You're doing beautifully. Keep going. 🙏"</p>
+        </div>
+        <div class="jd-card" onclick="selectJStep(4,this)">
+          <div class="jd-top"><div class="jd-ico">🎙️</div><div class="jd-title">Voice Heard</div></div>
+          <div class="jd-reward">+10% Token Discount (7-day) · Milestone Badge</div>
+          <p class="jd-desc">First voice note sent and listened to by the recipient — listen receipt confirmed.</p>
+          <p class="jd-quote">"Your voice carries warmth that words alone cannot. You chose to be truly present. 🎙️"</p>
+        </div>
+        <div class="jd-card" onclick="selectJStep(5,this)">
+          <div class="jd-top"><div class="jd-ico">📹</div><div class="jd-title">Face to Face</div></div>
+          <div class="jd-reward">+1 Free Boost Token · "Connection Deepens" Logged</div>
+          <p class="jd-desc">First completed video call reaching minimum 5 minutes in duration.</p>
+          <p class="jd-quote">"You looked into someone's eyes and chose courage. That is love in action. 💕"</p>
+        </div>
+        <div class="jd-card" onclick="selectJStep(6,this)">
+          <div class="jd-top"><div class="jd-ico">🌹</div><div class="jd-title">Heart Opened</div></div>
+          <div class="jd-reward">"Open Heart" Profile Frame · 7-Day Rose Border</div>
+          <p class="jd-desc">User shares Faith Story in chat, or sends 5+ faith-themed messages (NLP detected).</p>
+          <p class="jd-quote">"Vulnerability is the birthplace of love. Your openness is your greatest gift. ✝️"</p>
+        </div>
+        <div class="jd-card" onclick="selectJStep(7,this)">
+          <div class="jd-top"><div class="jd-ico">👑</div><div class="jd-title">Your Person</div></div>
+          <div class="jd-reward">Love Story Card · 1 Month Free Subscription</div>
+          <p class="jd-desc">User updates relationship status to "In a Relationship / Engaged / Married."</p>
+          <p class="jd-quote">"Love always wins. And today — gloriously — it won for you. 🎉"</p>
+        </div>
+      </div>
+
+      <div class="quotes-strip">
+        <div class="pill">💌 Words of Love</div>
+        <h3 class="pg-title" style="font-size:26px;margin-bottom:24px">Love Is Worth <span class="c">Every Wait</span></h3>
+        <div class="q-display">
+          <span class="q-icon" id="qi">🌹</span>
+          <p class="q-text" id="qt">"The best thing to hold onto in life is each other."</p>
+          <p class="q-auth" id="qa">Audrey Hepburn <span>· Actress & Humanitarian</span></p>
+        </div>
+        <div class="q-nav">
+          <button class="qnav-btn" onclick="pQ()" aria-label="Previous quote">←</button>
+          <button class="qnav-btn" onclick="nQ()" aria-label="Next quote">→</button>
+        </div>
+        <div class="qdots" id="qdots"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ PRICING ══════════════ -->
+<div id="page-pricing" class="page">
+  <div class="page-banner">
+    <div class="page-banner-inner">
+      <div>
+        <div class="page-banner-pill">💳</div>
+        <div class="page-banner-title">Pricing Plans — <span class="accent">Invest in Your Love Story</span></div>
+        <div class="page-banner-sub">Explore everything Young Love offers. Sign up free — no charge for 7 full days.</div>
+      </div>
+      </div>
+  </div>
+  <div class="page-inner">
+    <div class="container">
+
+      <!-- TRIAL BANNER -->
+      <div class="trial-banner" style="margin-bottom:40px">
+        <div class="tb-title">Your 7-Day Free Trial Awaits 💕</div>
+        <div class="tb-sub">Every Premium feature. Zero commitment. No card needed until you're ready. Just you and the possibility of forever.</div>
+        <div class="countdown">
+          <div class="cd"><div class="cd-num">07</div><div class="cd-label">Days Free</div></div>
+          <div class="cd"><div class="cd-num" id="cd-h">24</div><div class="cd-label">Hours</div></div>
+          <div class="cd"><div class="cd-num" id="cd-m">00</div><div class="cd-label">Minutes</div></div>
+          <div class="cd"><div class="cd-num" id="cd-s">00</div><div class="cd-label">Seconds</div></div>
+        </div>
+        <button class="btn-white" onclick="showPage('profile');showToast('💕 Lets get you set up — create your profile!')">Create Your Free Profile 🌹</button>
+        <p class="tb-fine">No credit card required during trial · Cancel anytime · Love always wins 💕</p>
+      </div>
+
+      <!-- PLANS -->
+      <div style="text-align:center;margin-bottom:32px">
+        <div class="pill">💎 Choose Your Plan</div>
+        <h2 class="pg-title" style="font-size:clamp(28px,3.5vw,40px);margin-top:8px">Plans That Fit Your <span class="c">Season of Life</span></h2>
+        <p class="pg-sub">After your 7-day free trial, your chosen plan activates automatically. Switch or cancel anytime.</p>
+      </div>
+
+      <div class="plans-grid" style="margin-bottom:48px">
+        <!-- PLUS -->
+        <div class="plan">
+          <span class="plan-badge pb-plus">Plus</span>
+          <div class="plan-price"><sup>$</sup>15<sub>/month</sub></div>
+          <div class="plan-name">For the Hopeful Explorer · Younger Cohorts</div>
+          <ul class="plan-feats">
+            <li><span class="pfc">✓</span>Ad-free browsing experience</li>
+            <li><span class="pfc">✓</span>Unlimited text messaging across all matches</li>
+            <li><span class="pfc">✓</span>1 automatic daily profile boost at 6pm</li>
+            <li><span class="pfc">✓</span>See who liked your profile (last 24 hours)</li>
+            <li><span class="pfc">✓</span>Basic faith filters: denomination + region</li>
+            <li><span class="pfc">✓</span>GIF and emoji reactions in chat</li>
+            <li><span class="pfc">✓</span>Journey of Love progress tracker</li>
+            <li><span class="pfc">✓</span>Daily scripture home screen widget</li>
+          </ul>
+          <button class="plan-btn out" onclick="showPage('profile');showToast('🌱 Great choice! Set up your profile to get started.')">Get Started — Free Trial 🌱</button>
+          <div class="trial-note">✨ 7 days FREE — no card needed to start</div>
+        </div>
+
+        <!-- PREMIUM (popular) -->
+        <div class="plan pop">
+          <span class="plan-badge pb-prem">Premium</span>
+          <div class="plan-price"><sup>$</sup>25<sub>/month</sub></div>
+          <div class="plan-name">For the Values-Driven Seeker · Mid-Age Cohorts</div>
+          <ul class="plan-feats">
+            <li><span class="pfc">✓</span>Everything in Plus included</li>
+            <li><span class="pfc">✓</span>Deep faith filters: denomination, church attendance, prayer life, baptism</li>
+            <li><span class="pfc">✓</span>Read receipts on all messages</li>
+            <li><span class="pfc">✓</span>Voice note messaging (3 min per note)</li>
+            <li><span class="pfc">✓</span>Native HD video calls (60 min/session)</li>
+            <li><span class="pfc">✓</span>Verified Call — Trust Mode live badge</li>
+            <li><span class="pfc">✓</span>Unlimited hearts per day</li>
+            <li><span class="pfc">✓</span>3 manual profile boosts per week</li>
+            <li><span class="pfc">✓</span>7-day full profile visitor history</li>
+          </ul>
+          <button class="plan-btn" onclick="showPage('profile');showToast('💕 Excellent! Set up your profile to unlock Premium.')">Get Started — Free Trial 💕</button>
+          <div class="trial-note">✨ 7 days FREE — no card needed to start</div>
+        </div>
+
+        <!-- VIP -->
+        <div class="plan">
+          <span class="plan-badge pb-vip">👑 VIP Elite</span>
+          <div class="plan-price"><sup>$</sup>35<sub>/month</sub></div>
+          <div class="plan-name">For the Covenant Seeker · Mature Cohorts</div>
+          <ul class="plan-feats">
+            <li><span class="pfc">✓</span>Everything in Premium included</li>
+            <li><span class="pfc">✓</span>2× algorithm matching weight</li>
+            <li><span class="pfc">✓</span>Priority inbox placement 👑</li>
+            <li><span class="pfc">✓</span>Weekly Profile Spotlight (500+ reach)</li>
+            <li><span class="pfc">✓</span>Human Match Concierge (3 curated/week)</li>
+            <li><span class="pfc">✓</span>5 free Roses + Blessings every month</li>
+            <li><span class="pfc">✓</span>Unlimited HD video — no session cap</li>
+            <li><span class="pfc">✓</span>VIP prayer partner matching pool</li>
+            <li><span class="pfc">✓</span>30-day visitor history</li>
+          </ul>
+          <button class="plan-btn out" onclick="showPage('profile');showToast('👑 VIP Elite awaits! Set up your profile to begin.')">Get Started — Free Trial 👑</button>
+          <div class="trial-note">✨ 7 days FREE — no card needed to start</div>
+        </div>
+      </div>
+
+      <!-- PLAN COMPARISON NOTE -->
+      <div style="background:#fff;border-radius:18px;padding:28px 32px;border:1px solid rgba(196,30,90,.12);margin-bottom:40px;text-align:center">
+        <div style="font-size:28px;margin-bottom:10px">🔄</div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:20px;color:var(--dark);margin-bottom:8px">How the Trial Works</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin-top:20px;text-align:left">
+          <div style="display:flex;gap:12px;align-items:flex-start"><span style="font-size:24px">📝</span><div><div style="font-weight:700;color:var(--dark);font-size:14px;margin-bottom:3px">Day 1 — Sign Up Free</div><div style="font-size:13px;color:var(--mid)">Create your profile. No payment needed to get started.</div></div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start"><span style="font-size:24px">💕</span><div><div style="font-weight:700;color:var(--dark);font-size:14px;margin-bottom:3px">Days 1–7 — Full Access</div><div style="font-size:13px;color:var(--mid)">Enjoy every Premium feature completely free for 7 days.</div></div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start"><span style="font-size:24px">💳</span><div><div style="font-weight:700;color:var(--dark);font-size:14px;margin-bottom:3px">Day 8 — Plan Activates</div><div style="font-size:13px;color:var(--mid)">Your chosen plan begins. Cancel before Day 8 and pay nothing.</div></div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start"><span style="font-size:24px">✝️</span><div><div style="font-weight:700;color:var(--dark);font-size:14px;margin-bottom:3px">Always Cancel-Free</div><div style="font-size:13px;color:var(--mid)">Cancel or change plans any time from your account settings.</div></div></div>
+        </div>
+      </div>
+
+      <!-- TOKENS -->
+      <div style="text-align:center;margin-bottom:20px">
+        <div class="pill">🌹 High-Intent Tokens</div>
+        <h3 class="pg-title" style="font-size:clamp(22px,3vw,32px);margin-top:8px">Message Before a <span class="c">Mutual Match</span></h3>
+        <p class="pg-sub">A grace-filled way to reach someone whose story genuinely moved you — available on all plans.</p>
+      </div>
+      <div class="tokens-row" style="margin-bottom:20px">
+        <div class="tok-card"><div class="tok-emoji">🙏</div><div class="tok-name">Blessing</div><div class="tok-price">$2.00</div><div class="tok-desc">140 characters of warm, intentional encouragement</div></div>
+        <div class="tok-card"><div class="tok-emoji">🌹</div><div class="tok-name">Rose</div><div class="tok-price">$3.00</div><div class="tok-desc">280 characters with beautiful animated arc delivery</div></div>
+        <div class="tok-card"><div class="tok-emoji">✨</div><div class="tok-name">Profile Boost</div><div class="tok-price">$5.00</div><div class="tok-desc">6 hours at the top of the discovery queue</div></div>
+        <div class="tok-card"><div class="tok-emoji">🎁</div><div class="tok-name">Starter Pack</div><div class="tok-price">$10.00</div><div class="tok-desc">3 Blessings + 2 Roses — save 17%</div></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div id="page-safety" class="page">
+  <div class="page-banner">
+    <div class="page-banner-inner">
+      <div>
+        <div class="page-banner-pill">🛡️</div>
+        <div class="page-banner-title">Safety — <span class="accent">Built Safe, By Design</span></div>
+        <div class="page-banner-sub">Layers of technology and human care protecting every heart.</div>
+      </div>
+      </div>
+  </div>
+  <div class="page-inner">
+    <div class="container">
+      
+      <div class="safety-grid" style="margin-bottom:28px">
+        <div class="sfcard"><div class="sfico">🔒</div><div><h3>End-to-End Encryption</h3><p>All messages, voice notes, and video calls use Signal Protocol. Young Love's servers never access your conversation content — ever.</p></div></div>
+        <div class="sfcard"><div class="sfico">👻</div><div><h3>Ghost Mode — Default On</h3><p>Invisible until you choose to appear. Browser tab reads "My Journal ✍️". Billing appears as "YL Digital Services." Zero accidental exposure.</p></div></div>
+        <div class="sfcard"><div class="sfico">🚫</div><div><h3>Predator Detection AI</h3><p>Real-time AI flags financial solicitation, isolation language, and predatory patterns — blocking harmful messages before they're delivered.</p></div></div>
+        <div class="sfcard"><div class="sfico">🧱</div><div><h3>Age Cohort Hard Walls</h3><p>Database-level barriers separate young and senior cohorts. No user, admin, or technical workaround can bypass them — ever.</p></div></div>
+        <div class="sfcard"><div class="sfico">🚫</div><div><h3>Zero Data Brokering</h3><p>No selling data. No Facebook Pixel, no behavioral ad networks. First-party analytics only. Full GDPR + CCPA compliance.</p></div></div>
+        <div class="sfcard"><div class="sfico">👥</div><div><h3>Human Trust &amp; Safety Team</h3><p>Real people review flagged accounts within 4 hours. Confirmed violations result in permanent bans plus device fingerprint blacklisting.</p></div></div>
+        <div class="sfcard"><div class="sfico">📍</div><div><h3>City-Level Location Only</h3><p>Location stored at city granularity only — never street, neighborhood, or GPS coordinates. Location data is never sold or shared.</p></div></div>
+        <div class="sfcard"><div class="sfico">🗑️</div><div><h3>Complete Data Erasure</h3><p>Full account deletion removes all PII, messages, photos, and faith data within 72 hours. An auditable deletion receipt is provided on request.</p></div></div>
+      </div>
+      <div class="risk-table">
+        <h3>⚠️ Risk Score &amp; Response Matrix</h3>
+        <table>
+          <thead><tr><th>Risk Event</th><th>Score Increase</th><th>Threshold Reached</th><th>Automated Action</th></tr></thead>
+          <tbody>
+            <tr style="background:rgba(230,57,70,.04)"><td>Age gap ≥20 years between users</td><td>Instant</td><td>Any</td><td><span class="badge-red">BLOCKED</span> Profile hidden — users cannot match, message, or interact</td></tr>
+            <tr><td>Age gap 15–19 years</td><td>+25 pts</td><td>≥50 pts</td><td><span class="badge-hold">WARNING</span> Conversation flagged — human review within 2 hours</td></tr>
+            <tr><td>Cohort boundary violation</td><td>+30 pts</td><td>≥50 pts</td><td><span class="badge-hold">REVIEW</span> Profile flagged — human review within 4 hours</td></tr>
+            <tr><td>Age gap exceeded (max window)</td><td>+20 pts</td><td>≥75 pts</td><td><span class="badge-hold">RESTRICT</span> Shadow-restricted — can view but not initiate new conversations</td></tr>
+            <tr><td>Pattern: 5+ younger-cohort targets / 24hr</td><td>+15 pts</td><td>≥100 pts</td><td><span class="badge-red">SUSPEND</span> Account suspended pending investigation</td></tr>
+            <tr><td>Financial solicitation message</td><td>+40 pts</td><td>≥150 pts</td><td><span class="badge-red">BANNED</span> Permanent ban + device fingerprint blacklist</td></tr>
+            <tr><td>Isolation language detected</td><td>+25 pts</td><td>Any flag</td><td><span class="badge-hold">HOLD</span> Message held 30 min for human review before delivery</td></tr>
+            <tr><td>3+ user reports (different reporters)</td><td>+35 pts each</td><td>Auto-escalates</td><td><span class="badge-red">PAUSE</span> Immediate account pause — manual reinstatement required</td></tr>
+          </tbody>
+        </table>
+        <p style="font-size:12px;color:var(--soft);margin-top:12px">Risk scores decay −5 per clean day. A 90-day clean streak fully resets the score to zero.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ PROFILE / SIGN-UP PAGE ══════════════ -->
+<div id="page-profile" class="page">
+  <div class="page-banner">
+    <div class="page-banner-inner">
+      <div>
+        <div class="page-banner-pill">💕</div>
+        <div class="page-banner-title"><span class="accent">Join Now</span> — Create Your Profile</div>
+        <div class="page-banner-sub">Set up your faith-centered profile. Your 7-day free trial starts the moment you join.</div>
+      </div>
+      </div>
+  </div>
+  <div class="page-inner">
+    <div class="profile-wrap">
+
+      <!-- STEP PROGRESS (4 steps) -->
+      <div class="step-progress" id="step-progress">
+        <div class="step-prog-item active" id="prog-1"><div class="spi-dot">1</div><div class="spi-label">Your Info</div></div>
+        <div class="step-prog-item" id="prog-2"><div class="spi-dot">2</div><div class="spi-label">About You</div></div>
+        <div class="step-prog-item" id="prog-3"><div class="spi-dot">📷</div><div class="spi-label">Verify</div></div>
+        <div class="step-prog-item" id="prog-4"><div class="spi-dot">4</div><div class="spi-label">Your Plan</div></div>
+      </div>
+
+      <!-- SUCCESS -->
+      <div class="profile-success" id="profile-success">
+        <div class="success-icon">💕</div>
+        <div class="success-title">Welcome to Young Love!</div>
+        <p class="success-sub">You're verified, your profile is live, and your 7-day free trial has begun. Your love story starts right now.</p>
+        <button class="btn-step-next" onclick="showPage('home');showToast('💕 Welcome! You can now be discovered by other members!')">Go Live on Young Love 🌹</button>
+      </div>
+
+      <!-- ── STEP 1 — YOUR INFO + CARD ─────────────────────── -->
+      <div class="profile-step active" id="profile-step-1">
+        <div class="form-card">
+          <h3>Personal Information</h3>
+          <p class="fc-sub">All fields marked <span style="color:var(--rose)">*</span> are required. Your information is completely private and secured.</p>
+          <div class="form-row">
+            <div class="form-group"><label class="form-label">First Name <span class="req">*</span></label><input class="form-input" id="inp-fname" type="text" placeholder="e.g. Sarah" autocomplete="given-name"><span class="field-error" id="err-fname">Please enter your first name.</span></div>
+            <div class="form-group"><label class="form-label">Last Name <span class="req">*</span></label><input class="form-input" id="inp-lname" type="text" placeholder="e.g. Johnson" autocomplete="family-name"><span class="field-error" id="err-lname">Please enter your last name.</span></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label class="form-label">Age <span class="req">*</span></label><input class="form-input" id="inp-age" type="number" placeholder="e.g. 28" min="18" max="99"><span class="field-error" id="err-age">You must be 18 or older to join.</span><div class="age-warn" id="age-warn">⚠️ Our algorithm strictly limits age gaps between matches for your protection.</div></div>
+            <div class="form-group"><label class="form-label">Gender <span class="req">*</span></label><select class="form-input" id="inp-gender"><option value="">Select gender...</option><option>Man</option><option>Woman</option><option>Prefer not to say</option></select><span class="field-error" id="err-gender">Please select your gender.</span></div>
+          </div>
+          <div class="form-row single"><div class="form-group"><label class="form-label">Email Address <span class="req">*</span></label><input class="form-input" id="inp-email" type="email" placeholder="e.g. sarah@example.com" autocomplete="email"><span class="field-error" id="err-email">Please enter a valid email address.</span></div></div>
+          <div class="form-row single"><div class="form-group"><label class="form-label">Confirm Email <span class="req">*</span></label><input class="form-input" id="inp-email2" type="email" placeholder="Re-enter your email"><span class="field-error" id="err-email2">Emails do not match.</span></div></div>
+          <div class="form-row">
+            <div class="form-group"><label class="form-label">Create Password <span class="req">*</span></label><input class="form-input" id="inp-pass" type="password" placeholder="Min. 8 characters" autocomplete="new-password"><span class="field-error" id="err-pass">Password must be at least 8 characters.</span></div>
+            <div class="form-group"><label class="form-label">Confirm Password <span class="req">*</span></label><input class="form-input" id="inp-pass2" type="password" placeholder="Re-enter password"><span class="field-error" id="err-pass2">Passwords do not match.</span></div>
+          </div>
+        </div>
+        <div class="form-card">
+          <h3>Payment Information</h3>
+          <p class="fc-sub">We save your card securely now so your plan activates after your free trial. <strong>You will not be charged today.</strong></p>
+          <div style="background:rgba(196,30,90,.05);border-radius:12px;padding:12px 16px;margin-bottom:20px;font-size:13px;color:var(--mid);border:1px solid rgba(196,30,90,.1);display:flex;gap:10px;align-items:flex-start"><span style="font-size:18px">🔒</span><span><strong>Your 7-day trial is completely free.</strong> Your card is only charged on Day 8 based on the plan you choose. Cancel before Day 8 — pay nothing.</span></div>
+          <div class="form-row single"><div class="form-group"><label class="form-label">Name on Card <span class="req">*</span></label><input class="form-input" id="inp-cname" type="text" placeholder="e.g. Sarah Johnson" autocomplete="cc-name"><span class="field-error" id="err-cname">Please enter the name on your card.</span></div></div>
+          <div class="form-row single"><div class="form-group"><label class="form-label">Card Number <span class="req">*</span></label><div class="input-wrap"><input class="form-input" id="inp-cardnum" type="text" placeholder="1234 5678 9012 3456" maxlength="19" autocomplete="cc-number" oninput="formatCard(this)"><span class="card-brand" id="card-brand">💳</span></div><span class="field-error" id="err-cardnum">Please enter a valid card number.</span></div></div>
+          <div class="form-row triple">
+            <div class="form-group" style="grid-column:span 2"><label class="form-label">Expiry Date <span class="req">*</span></label><input class="form-input" id="inp-expiry" type="text" placeholder="MM / YY" maxlength="7" autocomplete="cc-exp" oninput="formatExpiry(this)"><span class="field-error" id="err-expiry">Please enter a valid expiry date.</span></div>
+            <div class="form-group"><label class="form-label">CVV <span class="req">*</span></label><div class="input-wrap"><input class="form-input" id="inp-cvv" type="password" placeholder="•••" maxlength="4" autocomplete="cc-csc" oninput="this.value=this.value.replace(/\D/g,'')"><span class="card-brand">🔒</span></div><span class="field-error" id="err-cvv">Please enter your CVV.</span></div>
+          </div>
+          <div class="secure-badge"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>256-bit SSL encrypted · Powered by Stripe · PCI-DSS Compliant · Young Love never stores raw card data</div>
+        </div>
+        <div class="step-nav"><span style="font-size:12px;color:var(--soft)">Step 1 of 4</span><button class="btn-step-next" onclick="validateStep1()">Continue to About You →</button></div>
+      </div>
+
+      <!-- ── STEP 2 — ABOUT YOU ─────────────────────────────── -->
+      <div class="profile-step" id="profile-step-2">
+        <div class="form-card">
+          <h3>About You</h3>
+          <p class="fc-sub">Tell us about your faith and what you're looking for. This shapes every match we surface for you.</p>
+          <div class="form-row">
+            <div class="form-group"><label class="form-label">City / Location <span class="req">*</span></label><input class="form-input" id="inp-city" type="text" placeholder="e.g. Atlanta, GA"><span class="field-error" id="err-city">Please enter your city.</span></div>
+            <div class="form-group"><label class="form-label">Denomination <span class="req">*</span></label><select class="form-input" id="inp-denom"><option value="">Select denomination...</option><option>Baptist</option><option>Methodist</option><option>Pentecostal</option><option>Presbyterian</option><option>Episcopal</option><option>Non-Denominational</option><option>Catholic</option><option>Lutheran</option><option>Other</option></select><span class="field-error" id="err-denom">Please select your denomination.</span></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label class="form-label">Church Attendance</label><select class="form-input" id="inp-church"><option value="">How often do you attend?</option><option>Every Sunday</option><option>2–3 times per month</option><option>Once a month</option><option>Occasionally</option><option>Watching online</option></select></div>
+            <div class="form-group"><label class="form-label">Marriage Intention <span class="req">*</span></label><select class="form-input" id="inp-intent"><option value="">Select intention...</option><option>Seeking marriage</option><option>Open to marriage</option><option>Dating first, see where it goes</option><option>Friendship first</option></select><span class="field-error" id="err-intent">Please share your intention.</span></div>
+          </div>
+          <div class="form-row single"><div class="form-group"><label class="form-label">Tell Us About Yourself <span class="req">*</span></label><textarea class="form-input" id="inp-bio" placeholder="Share your faith story, hobbies, what makes your heart sing, and what you're looking for in a partner... (50–500 characters)" maxlength="500"></textarea><span class="field-error" id="err-bio">Please write at least 50 characters about yourself.</span><span class="field-hint" id="bio-counter">0 / 500 characters</span></div></div>
+        </div>
+        <div class="step-nav"><button class="btn-step-back" onclick="goStep(1)">← Back</button><span style="font-size:12px;color:var(--soft)">Step 2 of 4</span><button class="btn-step-next" onclick="validateStep2()">Continue to Verification →</button></div>
+      </div>
+
+      <!-- ── STEP 3 — LIVE VERIFICATION ────────────────────── -->
+      <div class="profile-step" id="profile-step-3">
+        <div class="form-card">
+          <h3>📷 Verification</h3>
+          <p class="fc-sub">Complete two quick checks to earn your <strong>💕 Verified badge</strong>. Your selfie becomes your profile photo. Your ID is used <strong>only for security</strong> and is never shown on your profile.</p>
+
+          <!-- Phase indicator -->
+          <div class="verify-phases">
+            <div class="vphase active" id="vp-selfie"><span class="vphase-num">1</span> Selfie</div>
+            <div class="vphase" id="vp-id"><span class="vphase-num">2</span> Photo ID</div>
+          </div>
+
+          <!-- ──── PHASE 1: SELFIE ──── -->
+          <div class="id-section active" id="phase-selfie">
+            <div class="verify-wrap">
+              <div id="verify-tips" style="margin-bottom:20px">
+                <div style="font-size:15px;font-weight:700;color:var(--dark);margin-bottom:12px">Take Your Profile Selfie:</div>
+                <div class="camera-tips">
+                  <span class="cam-tip">💡 Face the light source</span>
+                  <span class="cam-tip">👓 Remove sunglasses</span>
+                  <span class="cam-tip">🧢 Remove hats or hoods</span>
+                  <span class="cam-tip">😊 Smile naturally</span>
+                  <span class="cam-tip">📱 Hold still</span>
+                </div>
+                <p style="font-size:13px;color:var(--mid);margin-bottom:16px">Position your face inside the circle. Take your time — you can retake until you love it.</p>
+              </div>
+
+              <div class="camera-container" id="camera-container">
+                <video id="verify-video" autoplay playsinline muted style="display:none"></video>
+                <canvas id="verify-canvas" style="display:none"></canvas>
+                <div class="camera-overlay" id="cam-overlay" style="display:none"></div>
+                <div class="camera-guide-ring" id="cam-ring" style="display:none"></div>
+                <div class="camera-placeholder" id="cam-placeholder"><span>📷</span><span>Camera preview</span></div>
+              </div>
+
+              <div id="cam-countdown" style="display:none;font-size:32px;font-weight:900;color:var(--rose);margin:10px 0;font-family:'Playfair Display',serif"></div>
+
+              <div id="photo-preview-wrap" style="display:none;margin-bottom:16px">
+                <div class="preview-circle"><img id="preview-img" src="" alt="Your selfie"></div>
+                <div class="verify-badge-anim">😊 Looking great!</div>
+              </div>
+
+              <div class="cam-error" id="cam-error">⚠️ Camera not available. Please grant camera permission or use a device with a front-facing camera.</div>
+
+              <div class="cam-actions" id="cam-actions-start"><button class="btn-cam primary" onclick="startCamera()">📷 Enable Camera</button></div>
+              <div class="cam-actions" id="cam-actions-live" style="display:none"><button class="btn-cam primary" id="btn-take" onclick="startCountdown()">📸 Take Selfie</button></div>
+              <div class="cam-actions" id="cam-actions-preview" style="display:none">
+                <button class="btn-cam ghost" onclick="retakePhoto()">🔄 Retake</button>
+                <button class="btn-cam primary" onclick="confirmSelfie()">✅ Use This Photo — Next: ID Check</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ──── PHASE 2: PHOTO ID ──── -->
+          <div class="id-section" id="phase-id">
+            <div style="text-align:center">
+              <div style="font-size:15px;font-weight:700;color:var(--dark);margin-bottom:8px">Photo ID Verification</div>
+              <p style="font-size:13px;color:var(--mid);margin-bottom:14px;max-width:420px;margin-left:auto;margin-right:auto;line-height:1.6">
+                Take a clear photo of a valid government-issued ID. This is used <strong>only for identity verification</strong> and will <strong>never</strong> appear on your profile or be shared.
+              </p>
+
+              <div class="id-accepted-tags">
+                <span class="id-tag">🪪 Driver's License</span>
+                <span class="id-tag">🛂 Passport</span>
+                <span class="id-tag">🆔 State / National ID</span>
+                <span class="id-tag">🪪 Permanent Resident Card</span>
+              </div>
+
+              <div class="id-security-note">
+                <span style="font-size:20px">🔒</span>
+                <span><strong>Your ID is encrypted and stored securely.</strong> It is used solely to confirm your identity. Young Love will never display, share, or sell your ID data. It is auto-deleted after 90 days. Full GDPR & CCPA compliant.</span>
+              </div>
+
+              <div class="camera-tips" style="margin-bottom:14px">
+                <span class="cam-tip">📄 Place ID flat on a surface</span>
+                <span class="cam-tip">💡 Good lighting, no glare</span>
+                <span class="cam-tip">🔍 All text must be readable</span>
+                <span class="cam-tip">📐 Keep it inside the frame</span>
+              </div>
+
+              <!-- ID Camera -->
+              <div class="id-camera-container" id="id-camera-container">
+                <video id="id-video" autoplay playsinline muted style="display:none"></video>
+                <canvas id="id-canvas" style="display:none"></canvas>
+                <div class="id-camera-overlay" id="id-overlay" style="display:none"></div>
+                <div class="id-guide-corners" id="id-corners" style="display:none"></div>
+                <div class="id-guide-bottom" id="id-bottom-corners" style="display:none"></div>
+                <div class="id-camera-label" id="id-cam-label" style="display:none">Align your ID within the frame</div>
+                <div class="camera-placeholder" id="id-placeholder"><span>🪪</span><span>ID camera preview</span></div>
+              </div>
+
+              <div class="cam-error" id="id-cam-error">⚠️ Camera not available. Please grant camera permission.</div>
+
+              <!-- ID Preview -->
+              <div id="id-preview-wrap" style="display:none;margin-bottom:16px">
+                <div class="id-preview-wrap"><img id="id-preview-img" src="" alt="Your ID photo"></div>
+                <div class="verify-badge-anim" style="margin-top:12px">🪪 ID captured securely</div>
+              </div>
+
+              <!-- ID Actions -->
+              <div class="cam-actions" id="id-actions-start"><button class="btn-cam primary" onclick="startIdCamera()">🪪 Enable Camera for ID</button></div>
+              <div class="cam-actions" id="id-actions-live" style="display:none"><button class="btn-cam primary" id="btn-take-id" onclick="captureIdPhoto()">📸 Capture ID</button></div>
+              <div class="cam-actions" id="id-actions-preview" style="display:none">
+                <button class="btn-cam ghost" onclick="retakeId()">🔄 Retake ID</button>
+                <button class="btn-cam primary" onclick="confirmVerification()">✅ Complete Verification</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ──── BOTH COMPLETE ──── -->
+          <div class="id-section" id="phase-done">
+            <div class="both-verified-box">
+              <div style="font-size:48px;margin-bottom:8px">💕</div>
+              <h4>Fully Verified!</h4>
+              <p>Your selfie is now your profile photo and your ID has been securely verified. You've earned your <strong>💕 Verified badge</strong> — your profile is trusted and ready to go live.</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="step-nav">
+          <button class="btn-step-back" onclick="backFromVerify()">← Back</button>
+          <span style="font-size:12px;color:var(--soft)">Step 3 of 4</span>
+          <span style="font-size:12px;color:var(--soft)" id="verify-status">Complete both checks to continue</span>
+        </div>
+      </div>
+
+      <!-- ── STEP 4 — CHOOSE PLAN ───────────────────────────── -->
+      <div class="profile-step" id="profile-step-4">
+        <div class="form-card">
+          <h3>Choose Your Plan</h3>
+          <p class="fc-sub">Select the plan that's right for your season. <strong>Your 7-day free trial is included with all plans.</strong> Billing begins on Day 8 — cancel before then and pay nothing.</p>
+          <div style="display:flex;flex-direction:column;gap:16px;margin-top:8px">
+            <div class="plan-sel-full" id="pf-plus" onclick="selectFullPlan('plus')"><div class="psf-header"><div><div class="psf-name">Plus <span class="psf-tag" style="background:#FDEEF4;color:var(--rose)">PLUS</span></div><div class="psf-sub">For the Hopeful Explorer · Younger Cohorts</div></div><div class="psf-price">$15<span>/mo</span></div></div><div class="psf-features"><span>✓ Unlimited messaging</span><span>✓ Daily profile boost</span><span>✓ See who liked you</span><span>✓ Basic faith filters</span><span>✓ Journey tracker</span><span>✓ Daily scripture widget</span></div></div>
+            <div class="plan-sel-full active-plan-full" id="pf-prem" onclick="selectFullPlan('prem')"><div class="psf-recommended">⭐ Most Popular</div><div class="psf-header"><div><div class="psf-name">Premium <span class="psf-tag" style="background:#FFF3E0;color:var(--orange)">PREMIUM</span></div><div class="psf-sub">For the Values-Driven Seeker · Mid-Age Cohorts</div></div><div class="psf-price">$25<span>/mo</span></div></div><div class="psf-features"><span>✓ Everything in Plus</span><span>✓ Deep faith filters</span><span>✓ Voice notes (3 min)</span><span>✓ HD video calls (60 min)</span><span>✓ Verified Call badge</span><span>✓ 7-day visitor history</span></div></div>
+            <div class="plan-sel-full" id="pf-vip" onclick="selectFullPlan('vip')"><div class="psf-header"><div><div class="psf-name">VIP Elite 👑 <span class="psf-tag" style="background:var(--rose-dk);color:#fff">VIP</span></div><div class="psf-sub">For the Covenant Seeker · Mature Cohorts</div></div><div class="psf-price">$35<span>/mo</span></div></div><div class="psf-features"><span>✓ Everything in Premium</span><span>✓ 2× matching weight</span><span>✓ Human Match Concierge</span><span>✓ Weekly Profile Spotlight</span><span>✓ 5 free Roses/month</span><span>✓ Unlimited HD video</span></div></div>
+          </div>
+          <div style="margin-top:20px;padding:14px 16px;background:rgba(196,30,90,.05);border-radius:12px;border:1px solid rgba(196,30,90,.1);font-size:13px;color:var(--mid)">💳 Your saved card will be charged <strong>only after your 7-day free trial ends</strong>. Upgrade, downgrade, or cancel anytime.</div>
+          <span class="field-error" id="err-plan" style="display:none;margin-top:8px">Please select a plan to continue.</span>
+        </div>
+        <div style="text-align:center;margin-bottom:12px">
+          <label style="display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--mid);cursor:pointer">
+            <input type="checkbox" id="inp-terms" style="width:16px;height:16px;accent-color:var(--rose)">
+            I agree to the <span style="color:var(--rose);font-weight:600">Terms of Service</span> &amp; <span style="color:var(--rose);font-weight:600">Privacy Policy</span>
+          </label>
+          <div class="field-error" id="err-terms" style="display:none;justify-content:center;margin-top:4px">Please accept the terms to continue.</div>
+        </div>
+        <div class="step-nav"><button class="btn-step-back" onclick="goStep(3)">← Back</button><span style="font-size:12px;color:var(--soft)">Step 4 of 4</span><button class="btn-step-next" onclick="validateStep4()">🌹 Start My 7-Day Free Trial</button></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ CHAT PAGE ══════════════ -->
+<div id="page-chat" class="page">
+  <div class="page-banner">
+    <div class="page-banner-inner">
+      <div>
+        <div class="page-banner-pill">💬</div>
+        <div class="page-banner-title"><span class="accent">Messages</span> — Your Conversations</div>
+        <div class="page-banner-sub">Private, encrypted conversations with people you've connected with.</div>
+      </div>
+      </div>
+  </div>
+  <div class="page-inner" style="padding:0">
+    <div class="chat-layout">
+
+      <!-- SIDEBAR -->
+      <div class="chat-sidebar" id="chat-sidebar">
+        <div class="chat-sidebar-head">
+          <div class="chat-sidebar-title">💬 Messages <span id="chat-unread-badge" style="display:none;background:var(--rose);color:#fff;border-radius:100px;font-size:11px;padding:2px 8px;font-family:'Inter',sans-serif;font-weight:700"></span></div>
+          <input class="chat-search-input" id="chat-search" placeholder="🔍 Search conversations..." oninput="filterContacts(this.value)">
+        </div>
+        <div class="contact-list" id="contact-list">
+          <div class="chat-empty">
+            <div class="chat-empty-icon">💕</div>
+            <p>Like or Super Like profiles on the Algorithm page to start conversations. Your matches will appear here.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAIN CHAT AREA -->
+      <div class="chat-main" id="chat-main">
+        <div class="chat-no-select" id="chat-no-select">
+          <div class="chat-no-select-icon">💌</div>
+          <h3>Your Messages</h3>
+          <p>Select a conversation from the list, or like someone on the Algorithm page to begin connecting.</p>
+        </div>
+
+        <!-- Active chat (hidden until selected) -->
+        <div id="active-chat" style="display:none;flex-direction:column;height:100%">
+          <div class="chat-header">
+            <button class="chat-back-btn" id="chat-back-btn" onclick="closeChatMobile()">← Back</button>
+            <div class="chat-header-avatar" id="ch-avatar">💕</div>
+            <div class="chat-header-info">
+              <div class="chat-header-name" id="ch-name">—</div>
+              <div class="chat-header-status" id="ch-status">💕 Verified Member · Online</div>
+            </div>
+            <div class="chat-header-actions">
+              <button class="chat-icon-btn" onclick="startVideoCallWith()" title="Video Call">📹</button>
+              <button class="chat-icon-btn" title="Safety Info" onclick="showToast('🛡️ This conversation is end-to-end encrypted. Stay safe — never share personal financial info.')">🛡️</button>
+            </div>
+          </div>
+          <div class="chat-safety-bar">🔒 End-to-end encrypted · Young Love Safety AI active · Never share financial information</div>
+          <div class="chat-messages" id="chat-messages"></div>
+          <div class="chat-input-bar">
+            <button class="chat-voice-btn" id="voice-btn" onclick="toggleVoiceNote()" title="Voice Note">🎙️</button>
+            <textarea class="chat-input-text" id="chat-input" placeholder="Type a message..." rows="1" onkeydown="chatKeyDown(event)" oninput="autoResize(this)"></textarea>
+            <button class="chat-send-btn" onclick="sendChatMessage()">➤</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- VIDEO CALL OVERLAY -->
+<div class="video-call-overlay" id="video-call-overlay">
+  <div class="video-remote">
+    <div class="video-remote-bg"></div>
+    <div class="video-call-name">
+      <h3 id="vc-name">—</h3>
+      <p id="vc-sub">Calling...</p>
+    </div>
+    <div class="video-timer" id="vc-timer" style="position:absolute;top:80px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.7);font-size:14px;font-weight:600;z-index:2"></div>
+    <div class="video-remote-avatar" id="vc-avatar">💕</div>
+    <div class="vc-verified">💕 Verified Call · Encrypted</div>
+    <div class="video-local"><video id="local-video" autoplay muted playsinline></video></div>
+  </div>
+  <div class="video-controls">
+    <button class="vcbtn mute" id="vc-mute" onclick="toggleMute()" title="Mute">🎤</button>
+    <button class="vcbtn end" onclick="endVideoCall()" title="End Call">📵</button>
+    <button class="vcbtn vid" id="vc-vid" onclick="toggleCamOff()" title="Camera">📷</button>
+  </div>
+</div>
+
+<!-- REWARD POPUP -->
+<div class="reward-overlay" id="reward-overlay">
+  <div class="reward-card">
+    <span class="reward-confetti" id="reward-icon">🎉</span>
+    <div style="font-size:13px;font-weight:700;color:var(--rose);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px">Milestone Unlocked!</div>
+    <div class="reward-milestone-name" id="reward-name">—</div>
+    <div class="reward-prize" id="reward-prize">—</div>
+    <div class="reward-quote" id="reward-quote">—</div>
+    <button class="btn-collect" onclick="closeReward()">✨ Collect Reward</button>
+  </div>
+</div>
+
+<!-- MOTIVATION TOAST (top) -->
+<div class="motivation-toast" id="motivation-toast"></div>
+
+<!-- ══════════════ DEVOTION REVEAL OVERLAY ══════════════ -->
+<div class="devotion-overlay" id="devotion-overlay" onclick="if(event.target===this)closeDevotion()">
+  <div class="devotion-modal">
+    <div class="dev-header" id="dev-header">
+      <button class="dev-close" onclick="closeDevotion()">✕</button>
+      <div class="dev-header-icon" id="dev-icon">🌅</div>
+      <div class="dev-header-title" id="dev-title">Morning Blessing</div>
+      <div class="dev-header-time" id="dev-time"></div>
+    </div>
+    <div class="dev-body" id="dev-body"></div>
+  </div>
+</div>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="ft-brand">Young Love 💕</div>
+        <p class="ft-tag">A faith-first, hyper-secure, generationally-inclusive dating platform where every heart is welcomed and every love story is sacred.</p>
+        
+      </div>
+      <div class="ft-col">
+        <h4>Platform</h4>
+        <a onclick="showPage('how')">How It Works</a>
+        <a onclick="showPage('features')">Features</a>
+        <a onclick="showPage('algorithm')">Our Algorithm</a>
+        <a onclick="showPage('journey')">Journey of Love</a>
+        <a onclick="showPage('profile')">Pricing</a>
+      </div>
+      <div class="ft-col">
+        <h4>Community</h4>
+        <a onclick="showPage('how')">Daily Scripture</a>
+        <a onclick="showPage('journey')">Inspiration Quotes</a>
+        <a onclick="showToast('Prayer Circles — Coming Soon! 🙏')">Prayer Circles</a>
+        <a onclick="showToast('Love Stories — Coming Soon! 💕')">Love Stories</a>
+        <a onclick="showToast('Faith Forums — Coming Soon! ✝️')">Faith Forums</a>
+      </div>
+      <div class="ft-col">
+        <h4>Support</h4>
+        <a onclick="showPage('safety')">Safety Center</a>
+        <a onclick="showToast('Help Center — Coming Soon! 💌')">Help Center</a>
+        <a onclick="showToast('Privacy Policy — Coming Soon!')">Privacy Policy</a>
+        <a onclick="showToast('Terms of Service — Coming Soon!')">Terms of Service</a>
+        <a onclick="showPage('profile')">Start Free Trial</a>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <p>© 2026 Young Love · Where Faith Meets Forever · Love Always Wins 💕</p>
+      <p>Made with ❤️ for those who believe love is worth the wait.</p>
+    </div>
+  </div>
+</footer>
+
+<button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+<div id="toast" role="alert" aria-live="polite"></div>
